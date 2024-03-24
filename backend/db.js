@@ -1,5 +1,6 @@
-const mongoose = require('mongoose');
-const mongoURI = 'mongodb+srv://vamit7401:varun1234@cluster0.uzwpozt.mongodb.net/goodfoodmern?retryWrites=true&w=majority&appName=Cluster0';
+const mongoose = require('mongoose')
+// const mongoURI = import.meta.env.VITE_URI;
+// const mongoURI = `mongodb+srv://vamit7401:4343@cluster0.uzwpozt.mongodb.net/goodfoodmern?retryWrites=true&w=majority&appName=Cluster0`;
 
 const mongoDB = async () => {
     await mongoose.connect(mongoURI)
