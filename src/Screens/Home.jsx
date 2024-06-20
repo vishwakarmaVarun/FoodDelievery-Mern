@@ -41,14 +41,14 @@ const Home = () => {
                 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={search} onChange={(e) => {setSearch(e.target.value)}}/>
             </div>
           </div>
-          <div className="carousel-item active" style={{objectFit: "fill"}}>
-            <img src="https://source.unsplash.com/random/900x700/?burger" style={{filter: "brightness(50%)"}} className="d-block w-100" alt="..." />
+          <div className="carousel-item active" style={{objectFit: "contain"}}>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg9sTYvZhxRvNGURxvWuYqwWwlmK-DnJBCkA&s" style={{filter: "brightness(50%)", objectFit: 'contain'}} className="d-block w-100" alt="..." />
           </div>
           <div className="carousel-item" style={{objectFit: "fill"}}>
-            <img src="https://source.unsplash.com/random/900x700/?pastry" style={{filter: "brightness(50%)"}} className="d-block w-100" alt="..." />
+            <img src="https://www.bakerbychance.com/media/catalog/product/cache/6b95abd50ce8dc7005af20c3c925dbbe/1/_/1_pineapple_resized.png" style={{filter: "brightness(50%)", objectFit: 'contain'}} className="d-block w-100" alt="..." />
           </div>
           <div className="carousel-item" style={{objectFit: "fill"}}>
-            <img src="https://source.unsplash.com/random/900x700/?barbeque" style={{filter: "brightness(50%)"}} className="d-block w-100" alt="..." />
+            <img src="https://www.freeiconspng.com/thumbs/grill-png/barbecue-grill-png-22.png" style={{filter: "brightness(50%)", objectFit:'contain'}} className="d-block w-100" alt="..." />
           </div>
         </div>
         <button
@@ -79,8 +79,8 @@ const Home = () => {
       <div className="container">
         {foodCat.length !== 0 ? foodCat.map((data)=>{
             return (
-              <div className="row mb-3">
-                <div key={data.id} className="fs-4 m-3">
+              <div key={data._id} className="row mb-3">
+                <div className="fs-4 m-3">
                   {data.CategoryName}
                 </div>
                 <hr />

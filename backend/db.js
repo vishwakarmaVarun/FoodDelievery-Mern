@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
-// const mongoURI = import.meta.env.VITE_URI;
-// const mongoURI = `mongodb+srv://vamit7401:4343@cluster0.uzwpozt.mongodb.net/goodfoodmern?retryWrites=true&w=majority&appName=Cluster0`;
+const dotenv = require('dotenv')
+dotenv.config()
 
 const mongoDB = async () => {
-    await mongoose.connect(mongoURI)
+    await mongoose.connect(process.env.MONGO_URI)
         .then(async () => {
             console.log('Connected to database');
             // Perform further operations here
